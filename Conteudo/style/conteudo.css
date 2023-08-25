@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: rgb(51, 50, 50);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    
+    /* min-height: 200vh; */
+    color:rgb(201, 197, 197);
+  }
+
+  p {
+    color: white;
+  }
+
+  .container {
+    width: 100%; /* 100% da largura da janela (viewport) */
+    height: 100vh; /* 100% da altura da janela (viewport) */
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Adaptação para telas menores */
+  @media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduz o espaçamento interno */
+        font-size: 14px; /* Tamanho de fonte menor */
+    }
+  }
+
+  .container p {
+    margin-bottom: 20px; /* Espaçamento inferior para o parágrafo */
+  }
+
+  /* Menu */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    z-index: 1000;
+    transition: none;
+    width: 300px;
+    background: white;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-clip-path: circle(24px at 30px 24px);
+    clip-path: circle(24px at 32px 24px);
+    -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  }
+  nav:hover {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -webkit-clip-path: circle(390px at 225px 24px);
+    clip-path: circle(390px at 150px 24px);
+  }
+  /* Estilo para os links na barra de navegação */
+  nav a {
+    color: rgba(0, 0, 0, 0.87); /* Cor padrão */
+    transition: color 0.3s; /* Transição suave da cor */
+  }
+
+  /* Estilo para os links na barra de navegação quando hover */
+  nav a:hover {
+    color: white; /* Altera a cor para branco */
+  }
+
+  /* Estilo para os ícones de mídia social */
+  .social-icons a {
+    color: rgba(0, 0, 0, 0.87); /* Cor padrão */
+    transition: color 0.3s; /* Transição suave da cor */
+  }
+
+  /* Estilo para os ícones de mídia social quando hover */
+  .social-icons a:hover {
+    color: white; /* Altera a cor para branco */
+  }
+  a {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  a:hover { background: #035023; }
+  a:active { background: #035023; }
+  .navicon {
+    padding: 23px 20px;
+    cursor: pointer;
+    -webkit-transform-origin: 32px 24px;
+    -ms-transform-origin: 32px 24px;
+    transform-origin: 32px 24px;
+  }
+  .navicon div {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.87);
+  }
+  .navicon div:before,
+  .navicon div:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.87);
+    position: absolute;
+  }
+  .navicon div:before { top: -7px; }
+  .navicon div:after { top: 7px; }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav.active {
+      -webkit-clip-path: circle(390px at 150px 24px);
+      clip-path: circle(390px at 150px 24px);
+      background-color: white;
+      left: 0; /* Adicione essa linha para posicionar o menu no canto esquerdo */
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0; /* Mantém o menu oculto fora da tela */
+      margin: 20px;
+      z-index: 1000;
+      transition: none;
+      width: 300px;
+      background: white;
+      color: rgba(0, 0, 0, 0.87);
+      -webkit-clip-path: circle(24px at 30px 24px);
+      clip-path: circle(24px at 32px 24px);
+      -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+      transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    }
+    /* Restante do seu CSS */
+  }
+  /* Fim menu */
+
+  /* Sobre */
+  .hello {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .hello h1 {
+    font-size: 50px;
+    color: aliceblue;
+  }
+
+  .hello h2 {
+    font-size: 40px;
+    color: aliceblue;
+  }
+
+  .hello p {
+    font-size: 14px;
+    color: aliceblue;
+  }
+
+  .sobre {
+    margin-top: 30%;
+    padding: 75px;
+  }
+
+  .typedtext {
+    margin-top: 40%;
+    /* border-right: 2px solid black; */
+    animation: blinkTextCursor 800ms steps(44) infinite normal;
+    height: 40px;
+    margin-bottom: 55px;
+    color: #000;
+    display: block;
+  }
+  
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: black;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  /* Fim sobre */
+
+  /* Botão Saiba Mais*/
+  .btn-saiba-mais {
+    /* background-color: #3C3C3C; */
+  }
+  .btn-saiba {
+    width: 150px;
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-saiba span {
+    transition: all 0.3s;
+  }
+  .btn-saiba::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #023a19;
+    border-bottom-color: #023a19;
+    transform: scale(0.1, 1);
+  }
+  .btn-saiba:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-saiba:hover::before {
+    opacity: 1;	
+    transform: scale(1, 1);	
+  }
+  .btn-saiba::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(228, 222, 222, 0.1);
+  }
+  .btn-saiba:hover::after {
+    opacity: 0;	
+    transform: scale(0.1, 1);
+  }
+  /* Fim Botão Saiba mais */
+
+  /* Conhecimentos */
+  .skills {
+    /* background-color: rgb(17, 17, 17); */
+    background-image: url(/principal/Conteudo/img/tema.png);
+    background-repeat:no-repeat;
+  }
+
+  /* info skills */
+  .info-skills {
+    padding: 20px;
+  }
+
+  .info-skills h2 {
+    font-size: 30px;
+    padding: 10px;
+    color: whitesmoke;
+  }
+  .skills i {
+    color: #023a19;
+    /* color: white;
+    -webkit-text-stroke: 1px green; /* Contorno verde */
+    /* Contorno verde */
+    /* text-stroke: 1px green;  */
+    padding: 2px; 
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .info-skills p {
+    font-size: 14px;
+    padding: 20px;
+  }
+  /* Fim info skills */
+
+  /* card */
+  .card-skills {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-skills img {
+    max-width: 100px;
+}
+
+.card-info {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: -100%; /* Inicia oculto */
+    left: 0;
+    width: 100%;
+    background-color: rgba(19, 18, 18, 0.9);
+    transition: bottom 0.3s;
+}
+
+.card-skills:hover .card-info {
+    bottom: 0; /* Mostra o <p> ao passar o mouse */
+}
+
+.card-info h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.card-info p {
+    margin: 0;
+    padding: 10px;
+}
+  /* Control buttons  */
+.project {
+  background-color:  rgb(29, 28, 28);
+  background-image: url(/principal/Conteudo/img/tema.png);
+  background-repeat:no-repeat;
+}
+
+.project h1 {
+  color: #ffffff;
+}
+.project i {
+  color: #023a19;
+  /* color: white;
+  -webkit-text-stroke: 1px green; /* Contorno verde */
+  /* Contorno verde */
+  /* text-stroke: 1px green;  */
+  padding: 2px; 
+  font-weight: bold;
+  font-size: 30px;
+}
+.project h2 {
+  font-size: 40px;
+  padding: 20px;
+  background-image: url(/principal/Conteudo/img/clima.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  color: transparent; /* Torna o texto transparente */
+
+
+}
+
+.project label {
+  font-size: 15px;
+  padding: 20px;
+  color: rgb(241, 241, 241);
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+
+}
+
+.cepInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cep-input {
+  width: 200px;
+  padding: 15px;
+  color: #000;
+}
+
+.btn-cep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 33px;
+  margin-left: 6px;
+  color: #023a19;
+  font-weight: bold;
+}
+
+.project p {
+  color: #f0e8e8;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group label {
+  margin-right: 10px;
+}
+
+.input-group-append {
+  margin-left: -10px; /* Para ajustar o espaçamento do botão */
+}
+
+@media (max-width: 576px) {
+  /* Estilos para dispositivos menores */
+  .container {
+    padding: 0 15px; /* Espaçamento lateral para telas menores */
+  }
+}
+
+/* Previsão do tempo */
+.previsao {
+  position: relative;
+  top: 2rem;
+}
+
+.localidade {
+	text-align: center;
+	color: #fff;
+	/* font-size: 1.5rem; */
+  font-weight: bold;
+  font-size: 20px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.data-temp {
+  font-size: 15px;
+}
+
+.card-tempo {
+	width: 80%;
+	max-width: 35rem;
+	margin: 0 auto;
+	background: rgba(255,255,255,.2);
+	border: 2px solid #fff;
+	border-radius: 5px;
+	text-align: center;
+	color: #181818;
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+.tmp-condicao {
+  font-size: 20px;
+  padding: 10px;
+}
+.tmp-temperatura-tmp {
+	font-size: 6rem;
+	font-weight: 900;
+	position: relative;
+}
+
+.tmp-caract {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+.tmp-caract span {
+	display: block;
+}
+.tmp-caract-label {
+	font-size: 1.05rem;
+}
+.tmp-caract-valor {
+	margin-top: .1rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/* Cards - temperatura semana  */
+.tmp-semana {
+	width: 95%;
+	max-width: 55rem;
+	margin: 0 auto 0 auto;
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+}
+.tmp-semana-dia {
+	border-radius: var(--border-radius-cards);
+	padding: 2rem .5rem;
+	color: #fff;
+}
+.temp-semana-dia-data {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.tmp-semana-tmp-max,
+.tmp-semana-tmp-min {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+.tmp-semana-tmp-max {
+	margin-top: 1rem;
+	color: #bc0000;
+}
+.tmp-semana-tmp-min {
+	margin-bottom: .6rem;
+	color: #0057bc;	
+}
+.tmp-semana-tmp-min-val:before {
+	content: '\f063';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+.tmp-semana-tmp-max-val:before {
+	content: '\f062';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900
+}
+
+.localidade, .card-tempo{
+	display: none;
+}
+.semana-dia-1,
+.semana-dia-2,
+.semana-dia-3,
+.semana-dia-4,
+.semana-dia-5 {
+	display: none;
+	box-sizing: border-box;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: .01;
+	top: -9999px;
+	left: -9999px;
+}
+
+.slick-prev,
+.slick-next {
+	display: none !important;
+}
+
+.waiting {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.waiting:after {
+	content: '\f254';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 5rem;
+	line-height: 1em;
+	transform: translate(-50%,-50%);
+	color:#fff;
+	animation-name: girar-ampulheta;
+	animation-duration: .8s;
+	animation-fill-mode: forwards;
+	transform-origin: 50%;
+	animation-iteration-count: infinite;
+}
+
+/* Contato */
+.contact {
+  background-color: rgb(17, 17, 17);
+  width: 100%; /* 100% da largura da janela (viewport) */
+  height: 50vh; /* 100% da altura da janela (viewport) */
+    /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex; /* Adicionar display flex */
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: center; 
+}
+.contact h1 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+
+}
+.contact i {
+  color: #023a19;
+  padding: 2px; 
+  font-weight: bold;
+  font-size: 30px;
+}
+.contact h1 {
+  font-size: 15px;
+  color: white;
+}
+/* Alinhar à esquerda */
+.contact .contact-info {
+  text-align: left;
+}
+.info-contact {
+  width: 115%;
+}
+.info-text {
+  width: 100%;
+}
+
+.copy {
+  background-color: rgb(17, 17, 17);
+  width: 100%; /* 100% da largura da janela (viewport) */
+  height: 10vh; /* 100% da altura da janela (viewport) */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer p {
+  color: white;
+}
+
+/* linha de divisor */
+.divider {
+  width: 1px;
+  padding: 1px;
+  /* background-color: white; */
+  height: 1px;
+  margin: 0 20px;
+}
