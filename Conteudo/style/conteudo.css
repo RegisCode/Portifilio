@@ -357,7 +357,7 @@
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   font-weight: 800;
   /* Adicionando contorno verde */
-  text-shadow: 5px 5px 0px #085472;
+  /* text-shadow: 5px 5px 0px #085472; */
 }
 
 .project label {
