@@ -350,20 +350,14 @@
 .project h2 {
   font-size: 40px;
   padding: 20px;
-  background-image: url(/principal/Conteudo/img/clima.jpg);
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  color: #ffffff;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   font-weight: 800;
-  -webkit-font-smoothing: antialiased;
-  color: transparent; /* Torna o texto transparente */
-
-
+  /* Adicionando contorno verde */
+  text-shadow: 5px 5px 0px #085472;
 }
 
 .project label {
