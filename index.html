@@ -17,19 +17,45 @@
 </head>
 
 <body>
-    <!-- Primeira seção com partículas -->
-    <section id="home" class="container-fluid first-section text-center">
+      <!-- Primeira seção com partículas -->
+      <section id="home" class="hero-section">
         <div id="particles-js"></div>
-        <div class="centered-text">
-            <p>Regis<span class="typed-text"><strong>CODE</strong></span><span class="cursor">&nbsp;</span></p>
-            <div class="box-3">
-                <div class="btn btn-three" id="saibaMaisButton">
-                    <span>SAIBA MAIS</span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="name-glow">Regis</span>
+                    <span class="typed-text-container">
+                        <span class="typed-text"><strong>CODE</strong></span>
+                        <span class="cursor">&nbsp;</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Desenvolvedor Front-end & UX/UI Designer</p>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#About" class="cta-button">
+                    <span>Explore Meu Portfólio</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                
+                <div class="social-links">
+                    <a href="https://github.com/RegisCode" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_gcregis/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </div>
+        
+        <a href="#About" class="scroll-down" aria-label="Scroll down">
+            <div class="scroll-arrow"></div>
+        </a>
     </section>
-
     <!-- Navbar -->
     <div>
         <nav>
@@ -49,219 +75,238 @@
     </div>
 
     <!-- Seção About -->
-    <div class="container hello" id="About">
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-12 col-12 text-center hello">
-                                <h1 class="typedtext"></h1>              
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-8">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-12 col-12 sobre">
-                                <h2>Sobre</h2>
-                                <p>Sou <strong>Gabriel Carvalho Regis</strong>, desenvolvedor web atuando como full stack. Formado em Sistemas para Internet pela FMU, concentro meu foco profissional no front-end. Com 25 anos de idade, acumulo 2 anos de experiência na área da programação.</p>
-                                <div class="btn-saiba-mais">
-                                    <div class="btn btn-saiba" id="btn-linkedin">
-                                        <span>MAIS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section id="About" class="about-section">
+      <div class="container">
+          <div class="about-content">
+              <div class="about-header">
+                  <h1 class="animated-title">
+                      <span class="greeting">Olá, eu sou</span>
+                      <span class="name">Gabriel Carvalho</span>
+                      <span class="typing-effect"></span>
+                  </h1>
+              </div>
+              
+              <div class="about-details">
+                  <div class="about-text">
+                      <h2><span class="highlight">Sobre</span> Mim</h2>
+                      <div class="description">
+                          <p>Sou <strong>Gabriel Carvalho Regis</strong>, desenvolvedor front-end com foco em UX/UI Design. Formado em Sistemas para Internet pela FMU, possuo 2 anos de experiência criando interfaces digitais impactantes.</p>
+                          <p>Minha abordagem combina habilidades técnicas sólidas com sensibilidade para design, buscando sempre a melhor experiência do usuário.</p>
+                      </div>
+                      
+                      <div class="about-cta">
+                          <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank" class="cta-button">
+                              <span>Ver LinkedIn</span>
+                              <i class="fas fa-external-link-alt"></i>
+                          </a>
+                      </div>
+                  </div>
+                  
+                  <div class="about-highlights">
+                      <div class="highlight-card">
+                          <div class="highlight-icon">
+                              <i class="fas fa-laptop-code"></i>
+                          </div>
+                          <h3>Front-end Developer</h3>
+                          <p>Especializado em Angular, Ionic e React</p>
+                      </div>
+                      
+                      <div class="highlight-card">
+                          <div class="highlight-icon">
+                              <i class="fas fa-pencil-ruler"></i>
+                          </div>
+                          <h3>UX/UI Designer</h3>
+                          <p>Experiência em Figma e Design Thinking</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
 
     <!-- Seção Skills -->
-<div class="container skills" id="Skill">
-  <div class="row">
-      <div class="col-md-12 col-12 text-center section-header">
-          <h1><i><</i><strong>Conhecimentos & Habilidades</strong><i>></i></h1>
-          <p class="subtitle">Minha jornada em UX/UI Design e Desenvolvimento Front-end</p>
+    <div class="container skills" id="Skill">
+      <div class="row">
+          <div class="col-md-12 col-12 text-center section-header">
+              <h1><i><</i><strong>Conhecimentos & Habilidades</strong><i>></i></h1>
+              <p class="subtitle">Minha jornada em UX/UI Design e Desenvolvimento Front-end</p>
+          </div>
       </div>
-  </div>
 
-  <div class="row">
-      <div class="col-md-12">
-          <!-- Destaque para UX/UI Design -->
-          <div class="skills-category">
-              <h2 class="category-title"><i class="fas fa-pencil-ruler"></i> UX/UI Design</h2>
-              <div class="skills-grid">
-                  <div class="skill-card highlight">
-                      <div class="skill-icon">
-                          <i class="fab fa-figma"></i>
+      <div class="row">
+          <div class="col-md-12">
+              <!-- Destaque para UX/UI Design -->
+              <div class="skills-category">
+                  <h2 class="category-title"><i class="fas fa-pencil-ruler"></i> UX/UI Design</h2>
+                  <div class="skills-grid">
+                      <div class="skill-card highlight">
+                          <div class="skill-icon">
+                              <i class="fab fa-figma"></i>
+                          </div>
+                          <h3>Figma</h3>
+                          <p>Prototipação, Design Systems e Figma Library</p>
                       </div>
-                      <h3>Figma</h3>
-                      <p>Prototipação, Design Systems e Figma Library</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-project-diagram"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-project-diagram"></i>
+                          </div>
+                          <h3>Design Thinking</h3>
+                          <p>Ciclo duplo diamante e iteração ágil</p>
                       </div>
-                      <h3>Design Thinking</h3>
-                      <p>Ciclo duplo diamante e iteração ágil</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-users"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-users"></i>
+                          </div>
+                          <h3>User Research</h3>
+                          <p>Personas, Mapas de Empatia, Testes de Usabilidade</p>
                       </div>
-                      <h3>User Research</h3>
-                      <p>Personas, Mapas de Empatia, Testes de Usabilidade</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-th"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-th"></i>
+                          </div>
+                          <h3>Material Design</h3>
+                          <p>Princípios de design do Google</p>
                       </div>
-                      <h3>Material Design</h3>
-                      <p>Princípios de design do Google</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-mobile-alt"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-mobile-alt"></i>
+                          </div>
+                          <h3>Principle & Framer</h3>
+                          <p>Protótipos interativos e animações</p>
                       </div>
-                      <h3>Principle & Framer</h3>
-                      <p>Protótipos interativos e animações</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-clipboard-check"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-clipboard-check"></i>
+                          </div>
+                          <h3>Lean UX</h3>
+                          <p>Checklist de Nielsen e relatórios de usabilidade</p>
                       </div>
-                      <h3>Lean UX</h3>
-                      <p>Checklist de Nielsen e relatórios de usabilidade</p>
-                  </div>
-              </div>
-          </div>
-          
-          <!-- Front-end Development -->
-          <div class="skills-category">
-              <h2 class="category-title"><i class="fas fa-code"></i> Front-end Development</h2>
-              <div class="skills-grid">
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                      </div>
-                      <h3>HTML5</h3>
-                      <p>+3 anos de experiência</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                      </div>
-                      <h3>CSS3</h3>
-                      <p>Flexbox, Grid Systems, Breakpoints</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                      </div>
-                      <h3>JavaScript</h3>
-                      <p>+2 anos de experiência</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
-                      </div>
-                      <h3>Angular</h3>
-                      <p>+2 anos de experiência</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" alt="Ionic">
-                      </div>
-                      <h3>Ionic</h3>
-                      <p>Desenvolvimento mobile híbrido</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fab fa-windows"></i>
-                      </div>
-                      <h3>Windows Forms</h3>
-                      <p>Desenvolvimento de aplicações desktop</p>
                   </div>
               </div>
-          </div>
-          
-          <!-- Metodologias -->
-          <div class="skills-category">
-              <h2 class="category-title"><i class="fas fa-tasks"></i> Metodologias</h2>
-              <div class="skills-grid">
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-scrum"></i>
+              
+              <!-- Front-end Development -->
+              <div class="skills-category">
+                  <h2 class="category-title"><i class="fas fa-code"></i> Front-end Development</h2>
+                  <div class="skills-grid">
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                          </div>
+                          <h3>HTML5</h3>
+                          <p>+3 anos de experiência</p>
                       </div>
-                      <h3>Scrum</h3>
-                      <p>Gestão ágil de projetos</p>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                          </div>
+                          <h3>CSS3</h3>
+                          <p>Flexbox, Grid Systems, Breakpoints</p>
+                      </div>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                          </div>
+                          <h3>JavaScript</h3>
+                          <p>+2 anos de experiência</p>
+                      </div>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
+                          </div>
+                          <h3>Angular</h3>
+                          <p>+2 anos de experiência</p>
+                      </div>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" alt="Ionic">
+                          </div>
+                          <h3>Ionic</h3>
+                          <p>Desenvolvimento mobile híbrido</p>
+                      </div>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fab fa-windows"></i>
+                          </div>
+                          <h3>Windows Forms</h3>
+                          <p>Desenvolvimento de aplicações desktop</p>
+                      </div>
                   </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-chart-line"></i>
+              </div>
+              
+              <!-- Metodologias -->
+              <div class="skills-category">
+                  <h2 class="category-title"><i class="fas fa-tasks"></i> Metodologias</h2>
+                  <div class="skills-grid">
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-scrum"></i>
+                          </div>
+                          <h3>Scrum</h3>
+                          <p>Gestão ágil de projetos</p>
                       </div>
-                      <h3>Google Forms</h3>
-                      <p>Pesquisas e análise de dados</p>
-                  </div>
-                  
-                  <div class="skill-card">
-                      <div class="skill-icon">
-                          <i class="fas fa-sync-alt"></i>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-chart-line"></i>
+                          </div>
+                          <h3>Google Forms</h3>
+                          <p>Pesquisas e análise de dados</p>
                       </div>
-                      <h3>Iteração Ágil</h3>
-                      <p>Ciclos de desenvolvimento</p>
+                      
+                      <div class="skill-card">
+                          <div class="skill-icon">
+                              <i class="fas fa-sync-alt"></i>
+                          </div>
+                          <h3>Iteração Ágil</h3>
+                          <p>Ciclos de desenvolvimento</p>
+                      </div>
                   </div>
               </div>
           </div>
       </div>
-  </div>
-  
-  <!-- Projetos -->
-  <div class="row projects-showcase">
-      <div class="col-md-12">
-          <h2 class="projects-title"><i class="fas fa-star"></i> Meus Projetos de UX/UI</h2>
-          <div class="projects-grid">
-              <a href="https://medium.com/@gabriel.regedit/list/projeto-itau-09038014d56e" target="_blank" class="project-card">
-                  <div class="project-image" style="background-color: #FF6B6B;">
-                      <i class="fas fa-university"></i>
-                  </div>
-                  <h3>Projeto Itaú</h3>
-                  <p>Redesign de experiência bancária</p>
-              </a>
-              
-              <a href="https://medium.com/@gabriel.regedit/list/mesa-facil-ea888398e235" target="_blank" class="project-card">
-                  <div class="project-image" style="background-color: #4ECDC4;">
-                      <i class="fas fa-utensils"></i>
-                  </div>
-                  <h3>Mesa Fácil</h3>
-                  <p>Sistema para restaurantes</p>
-              </a>
-              
-              <a href="https://medium.com/@gabriel.regedit/list/sumup-pix-db039cf94268" target="_blank" class="project-card">
-                  <div class="project-image" style="background-color: #45B7D1;">
-                      <i class="fas fa-money-bill-wave"></i>
-                  </div>
-                  <h3>SumUp PIX</h3>
-                  <p>Pagamentos digitais</p>
-              </a>
+      
+      <!-- Projetos -->
+      <div class="row projects-showcase">
+          <div class="col-md-12">
+              <h2 class="projects-title"><i class="fas fa-star"></i> Meus Projetos de UX/UI</h2>
+              <div class="projects-grid">
+                  <a href="https://medium.com/@gabriel.regedit/list/projeto-itau-09038014d56e" target="_blank" class="project-card">
+                      <div class="project-image" style="background-color: #FF6B6B;">
+                          <i class="fas fa-university"></i>
+                      </div>
+                      <h3>Projeto Itaú</h3>
+                      <p>Redesign de experiência bancária</p>
+                  </a>
+                  
+                  <a href="https://medium.com/@gabriel.regedit/list/mesa-facil-ea888398e235" target="_blank" class="project-card">
+                      <div class="project-image" style="background-color: #4ECDC4;">
+                          <i class="fas fa-utensils"></i>
+                      </div>
+                      <h3>Mesa Fácil</h3>
+                      <p>Sistema para restaurantes</p>
+                  </a>
+                  
+                  <a href="https://medium.com/@gabriel.regedit/list/sumup-pix-db039cf94268" target="_blank" class="project-card">
+                      <div class="project-image" style="background-color: #45B7D1;">
+                          <i class="fas fa-money-bill-wave"></i>
+                      </div>
+                      <h3>SumUp PIX</h3>
+                      <p>Pagamentos digitais</p>
+                  </a>
+              </div>
           </div>
       </div>
-  </div>
-</div>
+    </div>
 
     <div class="row">
         <div class="divider"></div>
@@ -271,161 +316,155 @@
     <div class="container project" id="Project">
       <div class="row">
           <div class="col-md-12 col-12 text-center section-header">
-              <h1><i><</i><strong> Previsão do Tempo </strong><i>></i></h1>
-              <p class="subtitle">Consulte a previsão do tempo para qualquer localidade do Brasil</p>
+              <h1><i><</i><strong>Previsão do Tempo</strong><i>></i></h1>
+              <p class="subtitle">Consulte a previsão do tempo em tempo real</p>
           </div>
       </div>
     
       <div class="row justify-content-center">
-          <div class="col-md-8 col-12">
+          <div class="col-md-6 col-12">
               <div class="weather-search-box">
                   <div class="input-group">
-                      <input type="text" id="cepInput" class="form-control cep-input" placeholder="Digite um CEP (ex: 01001000)" aria-label="CEP">
-                      <div class="input-group-append">
-                          <button class="btn btn-search" type="button" id="searchWeather">
-                              <i class="fas fa-search"></i> Buscar
-                          </button>
-                      </div>
+                    <input type="text" id="weatherSearch" class="weather-input" placeholder="Digite uma cidade">
+                    <button class="btn-weather-search" id="searchWeatherBtn">
+                      <i class="fas fa-search"></i> Buscar
+                  </button>
                   </div>
-                  <small class="form-text text-muted">Exemplo: 01001000 (São Paulo/SP)</small>
               </div>
           </div>
       </div>
     
       <div class="weather-container">
-          <!-- Localização -->
-          <div class="weather-location text-center">
-              <h2><span class="localidade-cidade"></span>, <span class="localidade-uf"></span></h2>
-              <p class="weather-date"><span class="card-hoje data-temp"></span></p>
-          </div>
-        
           <!-- Card principal -->
           <div class="weather-current">
-              <div class="weather-main">
-                  <div class="weather-temp">
-                      <span class="tmp-temperatura-tmp"></span>
-                      <span class="weather-unit">°C</span>
-                  </div>
-                  <div class="weather-condition">
-                      <p class="tmp-condicao"></p>
+              <div class="weather-main-info">
+                  <div class="weather-temp-now">19°C</div>
+                  <div class="weather-details-now">
+                      <div class="weather-detail-item">
+                          <span class="detail-label">Chuva</span>
+                          <span class="detail-value">0%</span>
+                      </div>
+                      <div class="weather-detail-item">
+                          <span class="detail-label">Umidade</span>
+                          <span class="detail-value">88%</span>
+                      </div>
+                      <div class="weather-detail-item">
+                          <span class="detail-label">Vento</span>
+                          <span class="detail-value">11 km/h</span>
+                      </div>
                   </div>
               </div>
 
-              <div class="weather-details">
-                  <div class="detail-item">
-                      <i class="fas fa-tint"></i>
-                      <span class="detail-label">Umidade</span>
-                      <span class="detail-value tmp-caract-umidade-valor"></span>
-                  </div>
-                  <div class="detail-item">
-                      <i class="fas fa-temperature-low"></i>
-                      <span class="detail-label">Sensação</span>
-                      <span class="detail-value tmp-caract-sensacao-valor"></span>
-                  </div>
-                  <div class="detail-item">
-                      <i class="fas fa-wind"></i>
-                      <span class="detail-label">Vento</span>
-                      <span class="detail-value tmp-caract-vento-valor"></span>
-                  </div>
+              <!-- Previsão horária -->
+              <div class="weather-hourly">
+                  <h3 class="weather-section-title">Temperatura | Chuva | Vento</h3>
+                  <div class="hourly-temps">12° | 12° | 12° | 11° | 14° | 19° | 19° | 13°</div>
+                  <div class="hourly-times">23:00 | 02:00 | 05:00 | 08:00 | 11:00 | 14:00 | 17:00 | 20:00</div>
               </div>
           </div>
         
-          <!-- Previsão para os próximos dias -->
-          <div class="weather-forecast">
-              <h3 class="forecast-title">Próximos Dias</h3>
-              <div class="forecast-days">
-                  <div class="forecast-day semana-dia-1">
-                      <p class="forecast-date tmp-semana-dia-data"></p>
-                      <div class="forecast-temp">
-                          <span class="forecast-high tmp-semana-tmp-max-val"></span>°
-                          <span class="forecast-low tmp-semana-tmp-min-val"></span>°
-                      </div>
-                  </div>
-                  <div class="forecast-day semana-dia-2">
-                      <p class="forecast-date tmp-semana-dia-data"></p>
-                      <div class="forecast-temp">
-                          <span class="forecast-high tmp-semana-tmp-max-val"></span>°
-                          <span class="forecast-low tmp-semana-tmp-min-val"></span>°
-                      </div>
-                  </div>
-                  <div class="forecast-day semana-dia-3">
-                      <p class="forecast-date tmp-semana-dia-data"></p>
-                      <div class="forecast-temp">
-                          <span class="forecast-high tmp-semana-tmp-max-val"></span>°
-                          <span class="forecast-low tmp-semana-tmp-min-val"></span>°
-                      </div>
-                  </div>
-                  <div class="forecast-day semana-dia-4">
-                      <p class="forecast-date tmp-semana-dia-data"></p>
-                      <div class="forecast-temp">
-                          <span class="forecast-high tmp-semana-tmp-max-val"></span>°
-                          <span class="forecast-low tmp-semana-tmp-min-val"></span>°
-                      </div>
-                  </div>
-                  <div class="forecast-day semana-dia-5">
-                      <p class="forecast-date tmp-semana-dia-data"></p>
-                      <div class="forecast-temp">
-                          <span class="forecast-high tmp-semana-tmp-max-val"></span>°
-                          <span class="forecast-low tmp-semana-tmp-min-val"></span>°
-                      </div>
-                  </div>
+          <!-- Previsão semanal -->
+          <div class="weather-weekly">
+              <h3 class="weather-section-title">Previsão para os próximos dias</h3>
+              <div class="weekly-days">qui. | sex. | sáb. | dom. | seg. | ter. | qua.</div>
+              <div class="weekly-temps">
+                  <span>19° 11°</span> | 
+                  <span>20° 12°</span> | 
+                  <span>22° 13°</span> | 
+                  <span>24° 13°</span> | 
+                  <span>22° 12°</span> | 
+                  <span>25° 16°</span> | 
+                  <span>29° 17°</span>
               </div>
           </div>
       </div>
     </div>
 
     <!-- Seção Contact -->
-    <div class="contact" id="Contato">
-        <section>
-            <div class="row">
-                <div class="col-md-12 col-12 text-center">
-                    <div class="row">
-                        <div class="col-md-12 col-12">
-                            <h2><i></i><strong>Contato</strong><i></i></h2>
-                        </div>
-                    </div>
+    <section id="Contato" class="contact-section">
+      <div class="container">
+          <div class="section-header">
+              <h2>Vamos <span class="highlight">Conversar</span></h2>
+              <p class="subtitle">Entre em contato para oportunidades ou apenas para dizer olá!</p>
+          </div>
 
-                    <div class="col-sm-4 contact-info">
-                        <strong><p>Para saber mais entre em contato.</p></strong> 
-                        <p><span class="glyphicon glyphicon-map-marker"></span> São Paulo, BR</p>
-                        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-                        <p><span class="glyphicon glyphicon-envelope"></span> seguranca52@seguranca.com</p>
-                    </div>
+          <div class="contact-container">
+              <div class="contact-info">
+                  <div class="info-card">
+                      <h3>Informações de Contato</h3>
+                      <ul class="contact-details">
+                          <li>
+                              <i class="fas fa-map-marker-alt"></i>
+                              <span>São Paulo, Brasil</span>
+                          </li>
+                          <li>
+                              <i class="fas fa-phone-alt"></i>
+                              <span>+55 (00) 15151-5151</span>
+                          </li>
+                          <li>
+                              <i class="fas fa-envelope"></i>
+                              <span>contato@gabrieldev.com</span>
+                          </li>
+                      </ul>
+                      
+                      <div class="social-links">
+                          <a href="https://github.com/RegisCode" target="_blank" aria-label="GitHub">
+                              <i class="fab fa-github"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank" aria-label="LinkedIn">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                          <a href="https://www.instagram.com/_gcregis/" target="_blank" aria-label="Instagram">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
 
-                    <div class="col-sm-7">
-                        <div class="row info-contact">
-                            <div class="col-sm-6 form-group">
-                                <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                            </div>
-                            <div class="col-sm-6 info-text">
-                                <textarea class="form-control" id="comments" name="comments" placeholder="Mensagens" rows="5"></textarea><br>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-12 form-group btn-saiba-mais">
-                                <div class="btn btn-saiba" type="button" id="enviarBtn">
-                                    <span>ENVIAR</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>   
-    
+              <div class="contact-form">
+                  <form id="contactForm">
+                      <div class="form-row">
+                          <div class="form-group">
+                              <input type="text" id="name" name="name" required>
+                              <label for="name">Seu Nome</label>
+                              <div class="underline"></div>
+                          </div>
+                          <div class="form-group">
+                              <input type="email" id="email" name="email" required>
+                              <label for="email">Seu Email</label>
+                              <div class="underline"></div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <textarea id="message" name="message" rows="5" required></textarea>
+                          <label for="message">Sua Mensagem</label>
+                          <div class="underline"></div>
+                      </div>
+                      <button type="submit" class="submit-btn">
+                          <span>Enviar Mensagem</span>
+                          <i class="fas fa-paper-plane"></i>
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <div class="copy">
-        <div class="row">
-            <footer class="footer">
-                <p>&copy; 2023 Gabriel. Todos os direitos reservados.</p>
-            </footer>
-        </div>
-    </div>
+    <footer class="main-footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="copyright">
+                  &copy; <span id="year"></span> Gabriel Carvalho. Todos os direitos reservados.
+              </div>
+              <div class="back-to-top">
+                  <a href="#home" aria-label="Voltar ao topo">
+                      <i class="fas fa-arrow-up"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

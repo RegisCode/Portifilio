@@ -167,6 +167,7 @@ function capturarDataHoje() {
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
+
     // Iniciar efeitos
     if(textArray.length) setTimeout(type, newTextDelay + 250);
     typingEffect();
@@ -207,25 +208,152 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Mudar de btn-cep para searchWeather
-    const searchWeather = document.getElementById("searchWeather");
-    if (searchWeather) {
-        searchWeather.addEventListener("click", function(e) {
-            e.preventDefault();
-            let cep = document.getElementById("cepInput").value;
-            requisicaoCep(cep);
-        });
+    const searchWeatherBtn = document.getElementById("searchWeatherBtn");
+    const weatherSearch = document.getElementById("weatherSearch");
+    if (searchWeatherBtn && weatherSearch) {
+      searchWeatherBtn.addEventListener("click", function() {
+          const city = weatherSearch.value.trim();
+          if (city) {
+              fetchWeatherData(city);
+          }
+      });
+      
+      weatherSearch.addEventListener("keypress", function(e) {
+          if (e.key === "Enter") {
+              const city = weatherSearch.value.trim();
+              if (city) {
+                  fetchWeatherData(city);
+              }
+          }
+      });
     }
+
+    function fetchWeatherData(city) {
+      // Aqui você implementaria a chamada à API de previsão do tempo
+      console.log("Buscando dados para:", city);
+      // Exemplo de atualização dos dados (substitua pela chamada real à API)
+      document.querySelector(".weather-temp-now").textContent = "22°C";
+      document.querySelectorAll(".detail-value")[0].textContent = "10%";
+      document.querySelectorAll(".detail-value")[1].textContent = "75%";
+      document.querySelectorAll(".detail-value")[2].textContent = "8 km/h";
+  }
     
-    // Permitir busca com Enter
-    const cepInput = document.getElementById("cepInput");
-    if (cepInput) {
-        cepInput.addEventListener("keypress", function(e) {
-            if (e.key === "Enter") {
-                e.preventDefault();
-                let cep = this.value;
-                requisicaoCep(cep);
-            }
+});
+
+// Efeito de digitação no título
+document.addEventListener("DOMContentLoaded", function() {
+  const typingElement = document.querySelector('.typing-effect');
+  const texts = ["UX/UI Designer", "Front-end Developer", "Angular Specialist"];
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let isEnd = false;
+
+  function type() {
+      const currentText = texts[index];
+      
+      if (isDeleting) {
+          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+      } else {
+          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+          isEnd = true;
+          isDeleting = true;
+          setTimeout(type, 1500);
+      } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          index++;
+          if (index === texts.length) index = 0;
+          setTimeout(type, 500);
+      } else {
+          const speed = isDeleting ? 50 : 100;
+          setTimeout(type, speed);
+      }
+  }
+
+  setTimeout(type, 1000);
+});
+
+// Atualizar ano no footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Formulário de contato
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simulação de envio (substituir por código real de envio)
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.querySelector('span').textContent;
+    
+    submitBtn.querySelector('span').textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    
+    setTimeout(() => {
+        alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+        this.reset();
+        submitBtn.querySelector('span').textContent = originalText;
+        submitBtn.disabled = false;
+    }, 1500);
+});
+
+// Efeito de rolagem suave para o botão "Voltar ao topo"
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
-    }
-    
+    });
+});
+
+// Efeito de digitação
+document.addEventListener("DOMContentLoaded", function() {
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+  
+  const textArray = ["UX/UI", "Front-end", "Angular", "Ionic"];
+  const typingDelay = 100;
+  const erasingDelay = 50;
+  const newTextDelay = 2000;
+  
+  let textArrayIndex = 0;
+  let charIndex = 0;
+  let isTyping = true;
+
+  function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+          if(!cursorSpan.classList.contains("typing")) {
+              cursorSpan.classList.add("typing");
+          }
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+      } else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+      }
+  }
+
+  function erase() {
+      if (charIndex > 0) {
+          if(!cursorSpan.classList.contains("typing")) {
+              cursorSpan.classList.add("typing");
+          }
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+      } else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+          setTimeout(type, typingDelay + 500);
+      }
+  }
+
+  // Iniciar o efeito após um pequeno delay
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
