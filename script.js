@@ -205,4 +205,27 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("nav").classList.toggle("active");
         });
     }
+
+    // Mudar de btn-cep para searchWeather
+    const searchWeather = document.getElementById("searchWeather");
+    if (searchWeather) {
+        searchWeather.addEventListener("click", function(e) {
+            e.preventDefault();
+            let cep = document.getElementById("cepInput").value;
+            requisicaoCep(cep);
+        });
+    }
+    
+    // Permitir busca com Enter
+    const cepInput = document.getElementById("cepInput");
+    if (cepInput) {
+        cepInput.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                let cep = this.value;
+                requisicaoCep(cep);
+            }
+        });
+    }
+    
 });
