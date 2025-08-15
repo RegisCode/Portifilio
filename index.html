@@ -3,51 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Gabriel</title>
+    
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=".\style\style.css">
-
-    <title>Portifolio</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- links -->
-  <script src=".\src\script.js"></script>
-
-  <!-- Primeira pagina -->
-  <section>
-    <div class="container-fluid text-center first" id="home">
-      <!-- BIBLIOTECA JS: particles.js container --> 
-      <div id="particles-js"></div>
-      <!-- Frases -->
-      <div class="centered-text">
-        <p>Regis
-          <span class="typed-text"><strong>CODE</strong></span>
-          <!-- Animação de escrita -->
-          <span class="cursor">&nbsp;</span></p>
-        </p>
-        <!-- Botão saiba mais -->
-        <div class="box-3">
-          <div class="btn btn-three" id="saibaMaisButton">
-            <span>SAIBA MAIS</span>
-          </div>
+    <!-- Primeira seção com partículas -->
+    <section id="home" class="container-fluid first-section text-center">
+        <div id="particles-js"></div>
+        <div class="centered-text">
+            <p>Regis<span class="typed-text"><strong>CODE</strong></span><span class="cursor">&nbsp;</span></p>
+            <div class="box-3">
+                <div class="btn btn-three" id="saibaMaisButton">
+                    <span>SAIBA MAIS</span>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Navbar -->
+    <div>
+        <nav>
+            <div class="navicon" id="navicon">
+                <div></div>
+            </div>
+            <a href="#About">ABOUT</a>
+            <a href="#Skill">SKILLS</a>
+            <a href="#Project">PROJECT</a>
+            <a href="#Contato">CONTACT</a>
+            <div class="social-icons">
+                <a href="https://github.com/RegisCode" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_gcregis/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
     </div>
-  </section>
 
-  <!-- Biblioteca js -->
-  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
-  <!-- stats.js lib --> 
-  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-  <!-- Script com a função particlesJS() -->
-  <script src="src/particlesJS.js"></script>
+    <!-- Seção About -->
+    <div class="container hello" id="About">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-12 col-12 text-center hello">
+                                <h1 class="typedtext"></h1>              
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-8">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-12 col-12 sobre">
+                                <h2>Sobre</h2>
+                                <p>Sou <strong>Gabriel Carvalho Regis</strong>, desenvolvedor web atuando como full stack. Formado em Sistemas para Internet pela FMU, concentro meu foco profissional no front-end. Com 25 anos de idade, acumulo 2 anos de experiência na área da programação.</p>
+                                <div class="btn-saiba-mais">
+                                    <div class="btn btn-saiba" id="btn-linkedin">
+                                        <span>MAIS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Seção Skills -->
+    <div class="container skills" id="Skill">
+        <section>
+            <div class="row">
+                <div class="col-md-12 col-12 text-center">
+                    <div class="row">
+                        <div class="col-md-12 col-12 info-skills">
+                            <h2><i><</i><strong>Conhecimento</strong><i>></i></h2>
+                            <p>Habilidades técnicas adquiridas ao longo da minha jornada como desenvolvedor.</p>
+                        </div>
+                    </div>
+
+                    <div class="row cards">
+                        <div class="col-sm-10 col-md-10 col-lg-12 col-12">
+                            <div class="card-skills">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                                <div class="card-info">
+                                    <h2>HTML</h2>
+                                    <p>+3 anos de experiência</p>
+                                </div>
+                            </div>
+            
+                            <div class="card-skills">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                                <div class="card-info">
+                                    <h2>CSS</h2>
+                                    <p>+3 anos de experiência</p>
+                                </div>
+                            </div>
+            
+                            <div class="card-skills">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                <div class="card-info">
+                                    <h2>JAVASCRIPT</h2>
+                                    <p>+2 anos de experiência</p>
+                                </div>
+                            </div>
+            
+                            <div class="card-skills">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
+                                <div class="card-info">
+                                    <h2>ANGULAR</h2>
+                                    <p>+2 anos de experiência</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="row">
+        <div class="divider"></div>
+    </div>
+
+    <!-- Seção Project -->
+    <div class="container project" id="Project">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <div class="row">
+                    <div class="col-md-12 col-12 text-center">
+                        <h1><i><</i><strong>Projeto</strong><i>></i></h1>
+                        <p>Consumindo API de previsão do tempo da Climatempo.</p>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <h2>Previsão do Tempo</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <label for="cepInput" class="input-group-text">Digite o CEP</label>  
+                            </div>
+                            <div class="col-sm-12 cepInput">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="cepInput" class="form-control cep-input" placeholder="Pesquisar..">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-success btn-cep" type="button">
+                                            <i class="fas fa-search" style="font-size: 15px;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12 d-flex previsao">
+                        <p class="localidade">
+                            <span class="localidade-cidade"></span>
+                            /
+                            <span class="localidade-uf"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-tempo">
+                            <p class="card-hoje data-temp"></p>
+                            
+                            <div class="tmp-bloco">
+                                <p class="tmp-temperatura"><span class="tmp-temperatura-tmp"></span></p>
+                                <p class="tmp-condicao"></p>
+                            </div>
+
+                            <div class="tmp-caract">
+                                <p class="tmp-caract tmp-caract-umidade">
+                                    <span class="tmp-caract-label">Umidade:</span>
+                                    <span class="tmp-caract-valor tmp-caract-umidade-valor"></span>
+                                </p>
+                                <p class="tmp-caract tmp-caract-sesacao">
+                                    <span class="tmp-caract-label">Sensação:</span>
+                                    <span class="tmp-caract-valor tmp-caract-sensacao-valor"></span>
+                                </p>
+                                <p class="tmp-caract tmp-caract-vento">
+                                    <span class="tmp-caract-label">Vento:</span>
+                                    <span class="tmp-caract-valor tmp-caract-vento-valor"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tmp-semana">
+                            <div class="tmp-semana-dia semana-dia-1">
+                                <p class="tmp-semana-dia-data"></p>
+                                <div class="tmp-semana-temp-max">
+                                    <span class="sr-only">Máximo:</span>
+                                    <span class="tmp-semana-tmp-max-val"></span>º
+                                </div>
+                                <div class="tmp-semana-tmp-min">
+                                    <span class="sr-only">Mínimo:</span>
+                                    <span class="tmp-semana-tmp-min-val"></span>º
+                                </div>
+                            </div>
+                    
+                            <div class="tmp-semana-dia semana-dia-2">
+                                <p class="tmp-semana-dia-data"></p>
+                                <div class="tmp-semana-tmp-max">
+                                    <span class="sr-only">Máximo:</span>
+                                    <span class="tmp-semana-tmp-max-val"></span>º
+                                </div>
+                                <div class="tmp-semana-tmp-min">
+                                    <span class="sr-only">Mínimo:</span>
+                                    <span class="tmp-semana-tmp-min-val"></span>º
+                                </div>
+                            </div>
+                    
+                            <div class="tmp-semana-dia semana-dia-3">
+                                <p class="tmp-semana-dia-data"></p>
+                                <div class="tmp-semana-tmp-max">
+                                    <span class="sr-only">Máximo:</span>
+                                    <span class="tmp-semana-tmp-max-val"></span>º
+                                </div>
+                                <div class="tmp-semana-tmp-min">
+                                    <span class="sr-only">Mínimo:</span>
+                                    <span class="tmp-semana-tmp-min-val"></span>º
+                                </div>
+                            </div>
+                    
+                            <div class="tmp-semana-dia semana-dia-4">
+                                <p class="tmp-semana-dia-data"></p>
+                                <div class="tmp-semana-tmp-max">
+                                    <span class="sr-only">Máximo:</span>
+                                    <span class="tmp-semana-tmp-max-val"></span>º
+                                </div>
+                                <div class="tmp-semana-tmp-min">
+                                    <span class="sr-only">Mínimo:</span>
+                                    <span class="tmp-semana-tmp-min-val"></span>º
+                                </div>
+                            </div>
+                    
+                            <div class="tmp-semana-dia semana-dia-5">
+                                <p class="tmp-semana-dia-data"></p>
+                                <div class="tmp-semana-tmp-max">
+                                    <span class="sr-only">Máximo:</span>
+                                    <span class="tmp-semana-tmp-max-val"></span>º
+                                </div>
+                                <div class="tmp-semana-tmp-min">
+                                    <span class="sr-only">Mínimo:</span>
+                                    <span class="tmp-semana-tmp-min-val"></span>º
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Contact -->
+    <div class="contact" id="Contato">
+        <section>
+            <div class="row">
+                <div class="col-md-12 col-12 text-center">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <h2><i></i><strong>Contato</strong><i></i></h2>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 contact-info">
+                        <strong><p>Para saber mais entre em contato.</p></strong> 
+                        <p><span class="glyphicon glyphicon-map-marker"></span> São Paulo, BR</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> seguranca52@seguranca.com</p>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="row info-contact">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                            <div class="col-sm-6 info-text">
+                                <textarea class="form-control" id="comments" name="comments" placeholder="Mensagens" rows="5"></textarea><br>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-12 form-group btn-saiba-mais">
+                                <div class="btn btn-saiba" type="button" id="enviarBtn">
+                                    <span>ENVIAR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>   
+    
+    <!-- Footer -->
+    <div class="copy">
+        <div class="row">
+            <footer class="footer">
+                <p>&copy; 2023 Gabriel. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
