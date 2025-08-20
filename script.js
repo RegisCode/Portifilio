@@ -2,7 +2,7 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["hard", "fun", "a journey", "LIFE"];
+const textArray = ["", "", "", ""];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
@@ -37,15 +37,24 @@ function erase() {
 
 // Efeito de digitação "Hello World"
 function typingEffect() {
-    const contactTexts = ['"Hello world"'];
     const typedtext = document.querySelector(".typedtext");
+    
+    // Verifica se o elemento existe antes de manipular
+    if (!typedtext) return;
+    
+    const contactTexts = ['"Hello world"'];
     let removing = false;
-    let idx = char = 0;
+    let idx = 0;
+    let char = 0;
 
-    setInterval(() => {
-        if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
-        if (char == contactTexts[idx].length + 15) removing = true;
-        if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(0, typedtext.innerHTML.length - 1);
+    const typeInterval = setInterval(() => {
+        if (char < contactTexts[idx].length) {
+            typedtext.innerHTML += contactTexts[idx][char];
+        }
+        if (char === contactTexts[idx].length + 15) removing = true;
+        if (removing) {
+            typedtext.innerHTML = typedtext.innerHTML.substring(0, typedtext.innerHTML.length - 1);
+        }
         char++;
         
         if (typedtext.innerHTML.length === 0) {
@@ -208,74 +217,120 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Mudar de btn-cep para searchWeather
-    const searchWeatherBtn = document.getElementById("searchWeatherBtn");
-    const weatherSearch = document.getElementById("weatherSearch");
     if (searchWeatherBtn && weatherSearch) {
-      searchWeatherBtn.addEventListener("click", function() {
-          const city = weatherSearch.value.trim();
-          if (city) {
-              fetchWeatherData(city);
-          }
-      });
-      
-      weatherSearch.addEventListener("keypress", function(e) {
-          if (e.key === "Enter") {
-              const city = weatherSearch.value.trim();
-              if (city) {
-                  fetchWeatherData(city);
-              }
-          }
-      });
+        searchWeatherBtn.addEventListener("click", function() {
+            const city = weatherSearch.value.trim();
+            if (city) {
+                fetchWeatherData(city);
+            } else {
+                alert("Por favor, digite o nome de uma cidade.");
+            }
+        });
+        
+        weatherSearch.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                const city = weatherSearch.value.trim();
+                if (city) {
+                    fetchWeatherData(city);
+                } else {
+                    alert("Por favor, digite o nome de uma cidade.");
+                }
+            }
+        });
+    } else {
+        console.log("Elementos de busca do tempo não encontrados");
     }
 
     function fetchWeatherData(city) {
-      // Aqui você implementaria a chamada à API de previsão do tempo
-      console.log("Buscando dados para:", city);
-      // Exemplo de atualização dos dados (substitua pela chamada real à API)
-      document.querySelector(".weather-temp-now").textContent = "22°C";
-      document.querySelectorAll(".detail-value")[0].textContent = "10%";
-      document.querySelectorAll(".detail-value")[1].textContent = "75%";
-      document.querySelectorAll(".detail-value")[2].textContent = "8 km/h";
-  }
+
+        console.log("Buscando dados para:", city);
+        
+        // Seletores ATUALIZADOS para o novo HTML
+        const elements = {
+            location: document.querySelector(".location-name"),
+            date: document.querySelector(".current-date"),
+            condition: document.querySelector(".condition-text"),
+            temp: document.querySelector(".temp-value"),
+            humidity: document.querySelectorAll(".detail-value")[0],
+            wind: document.querySelectorAll(".detail-value")[1],
+            rain: document.querySelectorAll(".detail-value")[2]
+        };
+
+        // Verifica se todos os elementos existem
+        for (const [key, element] of Object.entries(elements)) {
+            if (!element) {
+                console.error(`Elemento não encontrado: ${key}`);
+                return;
+            }
+        }
+
+        // Simulação de dados (substitua pela API real)
+        const weatherData = {
+            location: `${city}, SP`,
+            date: new Date().toLocaleDateString('pt-BR', { 
+                weekday: 'long', 
+                day: 'numeric', 
+                month: 'long' 
+            }),
+            condition: "Nublado",
+            temperature: "22",
+            humidity: "75%",
+            wind: "8 km/h",
+            rain: "10%"
+        };
+
+        // Atualiza os elementos
+        elements.location.textContent = weatherData.location;
+        elements.date.textContent = weatherData.date;
+        elements.condition.textContent = weatherData.condition;
+        elements.temp.textContent = weatherData.temperature;
+        elements.humidity.textContent = weatherData.humidity;
+        elements.wind.textContent = weatherData.wind;
+        elements.rain.textContent = weatherData.rain;
+    }
     
 });
 
 // Efeito de digitação no título
 document.addEventListener("DOMContentLoaded", function() {
-  const typingElement = document.querySelector('.typing-effect');
-  const texts = ["UX/UI Designer", "Front-end Developer", "Angular Specialist"];
-  let index = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let isEnd = false;
+    const typingElement = document.querySelector('.typing-effect');
+    
+    if (!typingElement) return;
+    
+    const texts = ["UX/UI Designer", "Front-end Developer", "Angular Specialist"];
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isEnd = false;
 
-  function type() {
-      const currentText = texts[index];
-      
-      if (isDeleting) {
-          typingElement.textContent = currentText.substring(0, charIndex - 1);
-          charIndex--;
-      } else {
-          typingElement.textContent = currentText.substring(0, charIndex + 1);
-          charIndex++;
-      }
+    function type() {
+        const currentText = texts[index];
+        
+        if (isDeleting) {
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
 
-      if (!isDeleting && charIndex === currentText.length) {
-          isEnd = true;
-          isDeleting = true;
-          setTimeout(type, 1500);
-      } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          index++;
-          if (index === texts.length) index = 0;
-          setTimeout(type, 500);
-      } else {
-          const speed = isDeleting ? 50 : 100;
-          setTimeout(type, speed);
-      }
-  }
+        if (!isDeleting && charIndex === currentText.length) {
+            isEnd = true;
+            isDeleting = true;
+            setTimeout(type, 1500);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            index++;
+            if (index === texts.length) index = 0;
+            setTimeout(type, 500);
+        } else {
+            const speed = isDeleting ? 50 : 100;
+            setTimeout(type, speed);
+        }
+    }
 
-  setTimeout(type, 1000);
+    // Iniciar apenas se o elemento estiver visível
+    setTimeout(type, 1000)
 });
 
 // Atualizar ano no footer
@@ -310,50 +365,119 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Toggle mobile menu
+    navToggle.addEventListener("click", function() {
+        this.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        document.body.style.overflow = navMenu.classList.contains("active") ? "hidden" : "";
+    });
+
+    // Close menu when clicking on links
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            navToggle.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+        if (!event.target.closest('.main-nav') && navMenu.classList.contains('active')) {
+            navToggle.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+    });
+
+    // Add active class to current section
+    function setActiveLink() {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        
+        let currentSection = "";
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= sectionTop - 100) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink(); // Set active on load
+});
+
 // Efeito de digitação
 document.addEventListener("DOMContentLoaded", function() {
-  const typedTextSpan = document.querySelector(".typed-text");
-  const cursorSpan = document.querySelector(".cursor");
-  
-  const textArray = ["UX/UI", "Front-end", "Angular", "Ionic"];
-  const typingDelay = 100;
-  const erasingDelay = 50;
-  const newTextDelay = 2000;
-  
-  let textArrayIndex = 0;
-  let charIndex = 0;
-  let isTyping = true;
 
-  function type() {
-      if (charIndex < textArray[textArrayIndex].length) {
-          if(!cursorSpan.classList.contains("typing")) {
-              cursorSpan.classList.add("typing");
-          }
-          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-          charIndex++;
-          setTimeout(type, typingDelay);
-      } else {
-          cursorSpan.classList.remove("typing");
-          setTimeout(erase, newTextDelay);
-      }
-  }
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    
+    if (!typedTextSpan || !cursorSpan) return;
+    
+    const textArray = ["UX/UI", "Front-end", "Angular", "Ionic"];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 2000;
+    
+    let textArrayIndex = 0;
+    let charIndex = 0;
 
-  function erase() {
-      if (charIndex > 0) {
-          if(!cursorSpan.classList.contains("typing")) {
-              cursorSpan.classList.add("typing");
-          }
-          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-          charIndex--;
-          setTimeout(erase, erasingDelay);
-      } else {
-          cursorSpan.classList.remove("typing");
-          textArrayIndex++;
-          if(textArrayIndex >= textArray.length) textArrayIndex = 0;
-          setTimeout(type, typingDelay + 500);
-      }
-  }
+    function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+            if(!cursorSpan.classList.contains("typing")) {
+                cursorSpan.classList.add("typing");
+            }
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+        }
+    }
 
-  // Iniciar o efeito após um pequeno delay
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
+    function erase() {
+        if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) {
+                cursorSpan.classList.add("typing");
+            }
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, typingDelay + 500);
+        }
+    }
+
+    // Iniciar apenas se a seção estiver visível
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            setTimeout(type, 1000);
+        }
+    }, { threshold: 0.1 });
+
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        observer.observe(heroSection);
+    }
 });

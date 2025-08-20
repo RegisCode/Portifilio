@@ -25,7 +25,7 @@
                 <h1 class="hero-title">
                     <span class="name-glow">Regis</span>
                     <span class="typed-text-container">
-                        <span class="typed-text"><strong>CODE</strong></span>
+                        <span class="typed-text"><strong> </strong></span>
                         <span class="cursor">&nbsp;</span>
                     </span>
                 </h1>
@@ -42,11 +42,11 @@
                     <a href="https://github.com/RegisCode" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/gabriel-carvalho-regis-uidesigner/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://www.instagram.com/_gcregis/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://medium.com/@gabriel.regedit" target="_blank" aria-label="Medium">
+                        <i class="fab fa-medium"></i>
                     </a>
                 </div>
             </div>
@@ -57,20 +57,40 @@
         </a>
     </section>
     <!-- Navbar -->
-    <div>
-        <nav>
-            <div class="navicon" id="navicon">
-                <div></div>
+    <div class="navigation-wrapper">
+        <nav class="main-nav">
+            <!-- Logo/Brand -->
+            <div class="nav-brand">
+                <span class="logo-text">Regis</span>
+                <span class="logo-dot">.</span>
             </div>
-            <a href="#About">ABOUT</a>
-            <a href="#Skill">SKILLS</a>
-            <a href="#Project">PROJECT</a>
-            <a href="#Contato">CONTACT</a>
-            <div class="social-icons">
-                <a href="https://github.com/RegisCode" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/gabriel-carvalho-77b191147/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/_gcregis/" target="_blank"><i class="fab fa-instagram"></i></a>
+    
+            <!-- Menu Items -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#About" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Sobre</span>
+                </a>
+                <a href="#Skill" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>Habilidades</span>
+                </a>
+                <a href="#Project" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projetos</span>
+                </a>
+                <a href="#Contato" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contato</span>
+                </a>
             </div>
+    
+            <!-- Mobile Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
         </nav>
     </div>
 
@@ -314,70 +334,176 @@
 
     <!-- Seção Project -->
     <div class="container project" id="Project">
-      <div class="row">
-          <div class="col-md-12 col-12 text-center section-header">
-              <h1><i><</i><strong>Previsão do Tempo</strong><i>></i></h1>
-              <p class="subtitle">Consulte a previsão do tempo em tempo real</p>
-          </div>
-      </div>
-    
-      <div class="row justify-content-center">
-          <div class="col-md-6 col-12">
-              <div class="weather-search-box">
-                  <div class="input-group">
-                    <input type="text" id="weatherSearch" class="weather-input" placeholder="Digite uma cidade">
-                    <button class="btn-weather-search" id="searchWeatherBtn">
-                      <i class="fas fa-search"></i> Buscar
-                  </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-    
-      <div class="weather-container">
-          <!-- Card principal -->
-          <div class="weather-current">
-              <div class="weather-main-info">
-                  <div class="weather-temp-now">19°C</div>
-                  <div class="weather-details-now">
-                      <div class="weather-detail-item">
-                          <span class="detail-label">Chuva</span>
-                          <span class="detail-value">0%</span>
-                      </div>
-                      <div class="weather-detail-item">
-                          <span class="detail-label">Umidade</span>
-                          <span class="detail-value">88%</span>
-                      </div>
-                      <div class="weather-detail-item">
-                          <span class="detail-label">Vento</span>
-                          <span class="detail-value">11 km/h</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="row">
+            <div class="col-md-12 col-12 text-center section-header">
+                <h1><i><</i><strong>Previsão do Tempo</strong><i>></i></h1>
+                <p class="subtitle">Previsão meteorológica em tempo real</p>
+            </div>
+        </div>
 
-              <!-- Previsão horária -->
-              <div class="weather-hourly">
-                  <h3 class="weather-section-title">Temperatura | Chuva | Vento</h3>
-                  <div class="hourly-temps">12° | 12° | 12° | 11° | 14° | 19° | 19° | 13°</div>
-                  <div class="hourly-times">23:00 | 02:00 | 05:00 | 08:00 | 11:00 | 14:00 | 17:00 | 20:00</div>
-              </div>
-          </div>
-        
-          <!-- Previsão semanal -->
-          <div class="weather-weekly">
-              <h3 class="weather-section-title">Previsão para os próximos dias</h3>
-              <div class="weekly-days">qui. | sex. | sáb. | dom. | seg. | ter. | qua.</div>
-              <div class="weekly-temps">
-                  <span>19° 11°</span> | 
-                  <span>20° 12°</span> | 
-                  <span>22° 13°</span> | 
-                  <span>24° 13°</span> | 
-                  <span>22° 12°</span> | 
-                  <span>25° 16°</span> | 
-                  <span>29° 17°</span>
-              </div>
-          </div>
-      </div>
+        <div class="weather-search-container">
+            <div class="weather-search-box">
+                <input type="text" id="weatherSearch" class="weather-input" placeholder="Digite uma cidade">
+                <button class="btn-weather-search" id="searchWeatherBtn">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+
+        <div class="weather-dashboard">
+            <!-- Cabeçalho com localização -->
+            <div class="weather-header">
+                <h2 class="location-name">São Paulo, SP</h2>
+                <p class="current-date">Terça-feira, 5 de Maio</p>
+            </div>
+
+            <!-- Condição atual -->
+            <div class="current-weather">
+                <div class="weather-condition">
+                    <i class="fas fa-cloud weather-icon"></i>
+                    <span class="condition-text">Nublado</span>
+                </div>
+                <div class="temperature-main">
+                    <span class="temp-value">19</span>
+                    <span class="temp-unit">°C</span>
+                </div>
+            </div>
+
+            <!-- Detalhes meteorológicos -->
+            <div class="weather-details-grid">
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div class="detail-info">
+                        <span class="detail-label">Umidade</span>
+                        <span class="detail-value">88%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div class="detail-info">
+                        <span class="detail-label">Vento</span>
+                        <span class="detail-value">11 km/h</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-cloud-rain"></i>
+                    <div class="detail-info">
+                        <span class="detail-label">Chuva</span>
+                        <span class="detail-value">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previsão horária -->
+            <div class="hourly-forecast">
+                <h3 class="forecast-title">Previsão Horária</h3>
+                <div class="hourly-slider">
+                    <div class="hourly-item">
+                        <span class="hour">23:00</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="temp">12°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">02:00</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="temp">12°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">05:00</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="temp">12°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">08:00</span>
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="temp">11°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">11:00</span>
+                        <i class="fas fa-sun"></i>
+                        <span class="temp">14°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">14:00</span>
+                        <i class="fas fa-sun"></i>
+                        <span class="temp">19°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">17:00</span>
+                        <i class="fas fa-sun"></i>
+                        <span class="temp">19°</span>
+                    </div>
+                    <div class="hourly-item">
+                        <span class="hour">20:00</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="temp">13°</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previsão semanal -->
+            <div class="weekly-forecast">
+                <h3 class="forecast-title">Próximos Dias</h3>
+                <div class="weekly-grid">
+                    <div class="day-item">
+                        <span class="day-name">Qua</span>
+                        <i class="fas fa-cloud"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">19°</span>
+                            <span class="min-temp">11°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Qui</span>
+                        <i class="fas fa-cloud-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">20°</span>
+                            <span class="min-temp">12°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Sex</span>
+                        <i class="fas fa-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">22°</span>
+                            <span class="min-temp">13°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Sáb</span>
+                        <i class="fas fa-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">24°</span>
+                            <span class="min-temp">13°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Dom</span>
+                        <i class="fas fa-cloud-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">22°</span>
+                            <span class="min-temp">12°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Seg</span>
+                        <i class="fas fa-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">25°</span>
+                            <span class="min-temp">16°</span>
+                        </div>
+                    </div>
+                    <div class="day-item">
+                        <span class="day-name">Ter</span>
+                        <i class="fas fa-sun"></i>
+                        <div class="day-temps">
+                            <span class="max-temp">29°</span>
+                            <span class="min-temp">17°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Seção Contact -->
@@ -399,11 +525,11 @@
                           </li>
                           <li>
                               <i class="fas fa-phone-alt"></i>
-                              <span>+55 (00) 15151-5151</span>
+                              <span>+55 (11) 97513-4446</span>
                           </li>
                           <li>
                               <i class="fas fa-envelope"></i>
-                              <span>contato@gabrieldev.com</span>
+                              <span>gabriel.regefit@outlook.com</span>
                           </li>
                       </ul>
                       
